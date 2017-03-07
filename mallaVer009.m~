@@ -5,7 +5,7 @@ clear all
 
 fs = 10;
 
-nMA = importdata('nMA');
+nMA = importdata('nMA-mil.dat');
 
 
 xnMA = nMA(:,2);
@@ -20,24 +20,27 @@ x = min(xnMA):1/fs:max(xnMA);
 y = min(ynMA):1/fs:max(ynMA);
 [Xpol Ypol] = meshgrid(x,y);
 
-load('zpB12N12-a.mat')
+load('zp-mil.mat')
+Zp = inter2;
 
 
 s = 'a';
 for j=1:length(Zp(1,1,:))
+%for j=1:200
    [x2, y2, Pf2(j,:), Pf(:,:,j)] = analisisfft001(fs, Zp(:,:,j), Xpol, Ypol, s);
    j
 end
 
-sX = 'frecuenciasX';
+sX = 'frecuenciasX-mil.dat';
 %filenameX = strcat(sX,int2str(i));
 fileIDX = fopen(sX, 'w');
 
-sY = 'frecuenciasY';
+sY = 'frecuenciasY-mil.dat';
 %filenameY = strcat(sY,int2str(i));
 fileIDY = fopen(sY, 'w');
 
 for i=1:length(Zp(1,1,:))
+%for i=1:200
 
    for j=1:10
      
