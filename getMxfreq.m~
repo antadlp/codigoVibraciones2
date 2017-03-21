@@ -1,0 +1,5 @@
+function y = getMxfreq(yf, n)
+
+N = length(yf)
+
+ypow = yf.*conj(yf)/N;

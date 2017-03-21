@@ -1,4 +1,6 @@
-function y = maualFBT001(fw, w)
+function y = maualFBT001(fw, w, Ay)
+
+%Ay = Area y
 
 N = length(fw);
 M = length(w);
@@ -11,5 +13,7 @@ for n=1:N
    end
 end
 
-y = (1/())*ft;
+B = trapz(ft, 1:N);
+
+y = ft;
 
