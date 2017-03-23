@@ -1,4 +1,4 @@
-function y = maualFBT001(fw, w, Ay)
+function y = manualFBT001(fw, w, Ay)
 
 %Ay = Area y
 
@@ -15,5 +15,5 @@ end
 
 B = trapz(ft, 1:N);
 
-y = ft;
+y = (1/N)*ft;
 

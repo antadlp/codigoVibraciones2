@@ -15,5 +15,5 @@ end
 
 B = trapz(ft, 1:N);
 
-y = ft;
+y = (1/N)*ft;
 
