@@ -21,9 +21,11 @@ b = 1500;
 
 a+ap
 
-B = length(ena+ap):b))
+B = length(en((a+ap):(b+ap)))
 C = length(Yp(1,a:b))
 
+Ae = a+ap-1;
+Be = b+ap-1;
 
 t = length(mfbeB12N12a(:,1));
 t
@@ -36,7 +38,7 @@ ymin = min(real(Yp(end,a:b)))
 ymax = max(real(Yp(end,a:b)))
 
 
-plot(x, en((a+ap):b), 'r')
+plot(x, en(Ae:Be), 'r')
 
 
 
@@ -48,13 +50,13 @@ hold on
 h = plot(x,y, 'YDataSource', 'y');
 
 
-for m=2:t
-    m*50
+for m=2:10
+    m
     axis([xmin xmax ymin ymax])
     y = real(Yp(m,a:b));
     refreshdata(h,'caller')
     drawnow; 
-    pause(.5)
+    pause(.7)
 end
 
 %

@@ -117,7 +117,7 @@ cter = 1;
 Lp = length(t)
 
 j=1;
-for i=1:100:Lp
+for i=1:1:50
 
    [mx I] = getMxfreq(ffteB12N12a, i);
    mfbeB12N12a(j,:) = real(manualFBT001(ffteB12N12a, I, 1));

@@ -16,7 +16,7 @@ y = min(ynMA):1/fs:max(ynMA);
 [Xpol Ypol] = meshgrid(x,y);
 
 
-t = 1:1000;
+t = 1:5000;
 load('zp-B12N12a.mat');
 Zp = inter2;
 Z = -1*Zp(:,:,1);
