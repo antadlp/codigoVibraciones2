@@ -1,0 +1,104 @@
+
+\documentclass[a4paper, landscape]{article}
+
+\usepackage{geometry}
+\usepackage{lipsum}
+
+
+
+\usepackage[utf8]{inputenc}
+
+\usepackage {amsmath}
+\usepackage {amssymb}
+\usepackage [usenames]{color}
+\usepackage {graphicx}
+\usepackage{float}
+\usepackage[rftl]{floatflt}
+\usepackage[T1]{fontenc}
+\usepackage{units}
+\usepackage[spanish]{babel}
+\numberwithin{equation}{section}
+\usepackage{booktabs}
+\usepackage{nopageno}
+
+\usepackage{graphics}
+\usepackage{tabularx}
+
+\usepackage{bibentry}
+\usepackage{rotating}
+\usepackage{textcomp}
+\definecolor{ColorLinks}{RGB}{46,139,87}
+\usepackage{titlesec, blindtext, color}
+\usepackage{url}
+\usepackage[pdftex]{hyperref}
+\usepackage{makeidx}
+\usepackage{caption}
+\makeindex
+\usepackage{appendix}
+
+
+\usepackage{footnote}
+
+
+\hypersetup{
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=black
+}
+
+\definecolor{RojoTitulo}{RGB}{219,32,32}
+\definecolor{AzulSeccion}{RGB}{42,76,189}
+\definecolor{VerdeSubseccion}{RGB}{46,139,87}
+
+\usepackage{titlesec}
+
+\titleformat*{\section}{\normalfont\Large\bfseries\color{blue}}
+\titleformat*{\subsection}{\normalfont\large\bfseries\color{VerdeSubseccion}}
+\titleformat*{\subsubsection}{\normalfont\normalsize\bfseries\color{black}}
+\definecolor{MyBlack}     {cmyk} {0.0,0.0,0.0,1.0}
+\definecolor{MyBlue}      {cmyk} {1.0,0.3,0.0,0.6}
+\definecolor{MyGreen}     {cmyk} {0.8,0.0,0.4,0.5}
+\definecolor{MyLightGray} {cmyk} {0.0,0.0,0.0,0.1}
+\definecolor{MyRed}       {cmyk} {0.0,0.6,1.0,0.0}
+\definecolor{MyPink}      {cmyk} {0.0,0.8,0.0,0.0}
+\definecolor{MyWhite}     {cmyk} {0.0,0.0,0.0,0.0}
+\definecolor{MyYellow}    {cmyk} {0.0,0.0,0.8,0.2}
+\definecolor{Mytry}       {cmyk} {0.3,0.1,0.3,0.0}
+
+
+
+\renewcommand\spanishtablename{\scriptsize{TABLA}}
+
+\begin{document}
+
+
+
+
+\begin{table}[!htb]
+\captionsetup{width=0.7\textwidth, font={singlespacing}}
+\begin{center}
+\begin{tabular} {c c c c c c c c c c c c c c c c c c c c c}
+\multicolumn {11} {l} {{\bf Tabla .} {Frequencias de Mallas de Grafeno}}\\
+\\
+\hline \hline
+GP && BN && B23N23 && B3N2 && B3N3 && B6N6 && B12N12a && B12N12b && B12N12c && B12N12d && B12N12e \\
+\cline{1-1} \cline{3-3} \cline{5-5}\cline{7-7} \cline{9-9} \cline{11-11}\cline{13-13} \cline{15-15} \cline{17-17}\cline{19-19} \cline{21-21}
+2347 && 2360 && 2325 && 2348 && 2376 && 2356 && 2353 && 2380 && 2380 && 2351 && 2318\\
+2374 && 2385 && 2358 && 2375 && 2351 && 2381 && 2379 && 2355 && 2355 && 2352 && 2353\\
+2351 && 2361 && 2344 && 2410 && 2377 && 2382 && 2400 && 2361 && 2361 && 2328 && 2337\\
+2350 && 2388 && 2385 && 2347 && 2335 && 2366 && 2354 && 2264 && 2264 && 2320 && 2400\\
+2396 && 2295 && 2247 && 2349 && 2326 && 2400 && 2339 && 2239 && 2239 && 2379 && 2345\\
+2315 && 2352 && 2221 && 2351 && 2411 && 2315 && 2265 && 2275 && 2275 && 2381 && 2338\\
+2410 && 2260 && 2015 && 2332 && 2375 && 2365 && 2352 && 2451 && 2451 && 2350 && 2354\\
+2349 && 2329 && 2359 && 2397 && 2353 && 2414 && 2120 && 2414 && 2414 && 2239 && 2329\\
+2375 && 2386 && 2250 && 2333 && 2328 && 2369 && 2315 && 2311 && 2311 && 2353 && 2377\\
+2403 && 2270 && 2386 && 2352 && 2334 && 2380 && 2338 && 2294 && 2294 && 2158 && 2283\\
+\hline
+\end{tabular}
+\caption{\footnotesize{Mallas\label{dosdos}}}
+\end{center}
+\end{table}
+
+\end{document}
