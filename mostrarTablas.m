@@ -47,7 +47,18 @@ numMallas = 11;
    [mx(10,:) IeB12N12d] = getMxfreq(ffteB12N12d, 10);
    [mx(11,:) IeB12N12e] = getMxfreq(ffteB12N12e, 10);
 
-   IeGP = (IeGP-1)/5000;
+   IeGP = ((IeGP-1)/(5000*1e-15))*2*pi;
+   IeBN = ((IeBN-1)/(5000*1e-15))*2*pi;
+   IeB23N23 = ((IeB23N23-1)/(5000*1e-15))*2*pi;
+   IeB2N2 = ((IeB2N2-1)/(5000*1e-15))*2*pi;
+   IeB3N3 = ((IeB3N3-1)/(5000*1e-15))*2*pi;
+   IeB6N6 = ((IeB6N6-1)/(5000*1e-15))*2*pi;
+   IeB12N12a = ((IeB12N12a-1)/(5000*1e-15))*2*pi;
+   IeB12N12b = ((IeB12N12b-1)/(5000*1e-15))*2*pi;
+   IeB12N12c = ((IeB12N12c-1)/(5000*1e-15))*2*pi;
+   IeB12N12d = ((IeB12N12d-1)/(5000*1e-15))*2*pi;
+   IeB12N12e = ((IeB12N12e-1)/(5000*1e-15))*2*pi;
+ 
    
 
 
@@ -242,7 +253,7 @@ fprintf(fid,'\\cline{19-19} \\cline{21-21}');
 fprintf(fid,'\n');
 
 for i=1:10
-   fprintf(fid,'%0.3d && %d && %d && %d && %d && %d && %d && %d && %d && %d && %d\\\\', ...
+   fprintf(fid,'%0.3f && %d && %d && %d && %d && %d && %d && %d && %d && %d && %d\\\\', ...
    [IeGP(i)'; IeBN(i)'; IeB23N23(i)'; IeB3N3(i)'; IeB6N6(i)';...
    IeB12N12a(i)'; IeB12N12b(i)'; IeB12N12c(i)'; IeB12N12c(i)';...
    IeB12N12d(i)'; IeB12N12e(i)']);
@@ -466,8 +477,9 @@ fprintf(fid,'\\cline{7-7} \\cline{9-9} \\cline{11-11}');
 %fprintf(fid,'\\cline{19-19} \\cline{21-21}');
 fprintf(fid,'\n');
 
+format short
 for i=1:10
-   fprintf(fid,'%0.3d && %d && %d && %d && %d && %d \\\\', ...
+   fprintf(fid,'%.3E && %.3E && %.3E && %.3E && %.3E && %.3E \\\\', ...
    [IeGP(i)'; IeB2N2(i)'; IeB3N3(i)'; IeB6N6(i)'; IeB23N23(i)';...
    IeBN(i)']);
    fprintf(fid,'\n');
@@ -530,7 +542,7 @@ fprintf(fid,'\\cline{7-7} \\cline{9-9}');
 fprintf(fid,'\n');
 
 for i=1:10
-   fprintf(fid,'%d && %d && %d && %d && %d \\\\', ...
+   fprintf(fid,'%.3E && %.3E && %.3E && %.3E && %.3E \\\\', ...
    [IeB12N12a(i)'; IeB12N12b(i)'; IeB12N12c(i)'; IeB12N12d(i)';...
    IeB12N12e(i)']);   
    fprintf(fid,'\n');
