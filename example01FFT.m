@@ -25,24 +25,24 @@ title('Single-Sided Amplitude Spectrum of X(t)')
 xlabel('f (Hz)')
 ylabel('|P1(f)|')
 
-t1=1:500;
-N = length(t1);
-y1 = sin(2*pi*15*t1);
+clear all
+deltat = 0.01;
+t1 = deltat:deltat:100;
+y1 = sin(2*pi*(5.3)*t1) + 0.3*sin(2*pi*9*t1) + sin(2*pi*20*t1);
+
+N = length(t1)
 
 yf = fft(y1);
-ypow = abs(yf/N);
-ypow1 = ypow(1:N/2+1);
-ypow1(2:end-1) = 2*ypow1(2:end-1)
-f = (0:(N/2))/N;
-
-A = length(f)
-
-B = length(ypow1)
+P2 = abs(yf/N);
 
 
-figure(3), plot(f, ypow1)
+P1 = P2(1:N/2+1);
+P1(2:end-1) = 2*P1(2:end-1);
 
+deltat = abs(t1(10)-t1(11));
+f = (1/deltat)*(0:(N/2))/N;
 
+lf = length(f)
 
-
-
+figure(3), plot(f, P1)
+grid on
