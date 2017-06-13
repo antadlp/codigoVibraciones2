@@ -8,7 +8,7 @@ function gridXY001
 
 close all
 clear all
-filename = 'frame1-GP-rota.dat'; % Primer frame del movie a analizar
+filename = 'frame1-BN-rota.dat'; % Primer frame del movie a analizar
 XYZFile = importdata(filename);
 
 format short e 
@@ -104,7 +104,7 @@ end
 
 D = importdata('frame1-mil-rota.dat'); %no cambiar nombre -mil!!
 nAtoms = 142;
-fileMap0 = fopen('map0-GP.dat','w');
+fileMap0 = fopen('map0-BN.dat','w');
 for i=1:nAtoms
 
    F = abs(X-D(i,1));
@@ -231,8 +231,8 @@ r = .3;
 ep = 20;
 offset = 0;
 %/home/ruben/tonio/TemporalesNoOrg/vibracionesMatlab
-sHor = '/home/ruben/tonio/TemporalesNoOrg/vibracionesMatlab/gridXY-GP/horizontales-GP-';
-sVert = '/home/ruben/tonio/TemporalesNoOrg/vibracionesMatlab/gridXY-GP/verticales-GP-';
+sHor = '/home/ruben/malla/gridXY-BN/horizontales-BN-';
+sVert = '/home/ruben/malla/gridXY-BN/verticales-BN-';
 [xX02 lineaX02] = makeAtomsLine(H69, H47);
 listaHor02 = crossLine2dAtom(MA, xX02, lineaX02, r, ep, 1);
 arrHor02 = arrangeAtomsLine(xX02, lineaX02, MA, listaHor02, 0.001);
@@ -1184,7 +1184,7 @@ A2 = [arrVert21(length(arrVert21), 1) arrVert21(length(arrVert21), 2)];
 plot(xY21t, lineaY21t)
 
 
-namefile = 'nMA-GP.dat';
+namefile = 'nMA-BN.dat';
 fileID = fopen(namefile, 'w');
 for i=1:length(nMA(:,1))
    fprintf(fileID, '%f\t %f\t %f\t\n', nMA(i,1),...
@@ -1247,15 +1247,15 @@ end
 axis([limitXIzq limitXDer limitYAbj limitYArr]);
 grid on
 
-save('nMA-GP', 'nMA')
+save('nMA-BN', 'nMA')
 
-%A = importdata('nMA-GP');
+%A = importdata('nMA-BN');
 A = nMA;
-B = importdata('char-GP.dat');
-C = importdata('frame1-GP-rota.dat');
+B = importdata('char-BN.dat');
+C = importdata('frame1-BN-rota.dat');
 
-fileID = fopen('mallanMA-GP.xyz','w');
-fileID2 = fopen('mallanMA-GP.dat','w');
+fileID = fopen('mallanMA-BN.xyz','w');
+fileID2 = fopen('mallanMA-BN.dat','w');
 nAtoms = 142;
 
 [A1 A2] = unique(A(:,1));
@@ -1307,9 +1307,9 @@ fclose('all');
 
 
 
-D = importdata('mallanMA-GP.dat');
+D = importdata('mallanMA-BN.dat');
 
-fileMap = fopen('mapnMA-GP.dat','w');
+fileMap = fopen('mapnMA-BN.dat','w');
 for i=1:nAtoms
 
    F = abs(X-D(i,1));

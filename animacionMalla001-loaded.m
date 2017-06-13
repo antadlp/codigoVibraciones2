@@ -1,7 +1,6 @@
-%function AnimacionD1(t,x,p)
-function animacionMalla001
+function y = animacionMalla001Loaded(inter2)
 
-nMA = importdata('nMA-B12N12a.dat');
+nMA = importdata('nMA-GP.dat');
 
 xnMA = nMA(:,2);
 ynMA = nMA(:,3);
@@ -16,20 +15,22 @@ y = min(ynMA):1/fs:max(ynMA);
 [Xpol Ypol] = meshgrid(x,y);
 
 
-t = 1:5000;
-load('zp-B12N12a.mat');
+%load('zp-B12N12a.mat');
 Zp = inter2;
 Z = -1*Zp(:,:,1);
 h = surf(Xpol,Ypol,Z, 'ZDataSource', 'Z', 'EdgeColor', 'none');
 axis([-inf inf -inf inf -1 1])
 hold on
 
-for m=2400:2600
+for m=1:4999
     m
     Z = -1*Zp(:,:,m);
     refreshdata(h,'caller')
     drawnow; 
     pause(.035)
 end
+
+y = "ok"
+return y
 
 
