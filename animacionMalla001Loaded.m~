@@ -1,6 +1,6 @@
 function animacionMalla001Loaded(inter2, frames)
 
-nMA = importdata('nMA-BN.dat');
+nMA = importdata('nMA-B3N3.dat');
 
 xnMA = nMA(:,2);
 ynMA = nMA(:,3);

@@ -8,7 +8,7 @@ def getCoordinates(inputFile):
     step = 1 
     for line in F:
         if "frame" in line:
-            s0 = "/home/ruben/malla/separados-B2N2-dat/"
+            s0 = "/home/antadlp/malla/separados-B6N6-dat/"
             s = s0 + "frame" + str(step) + ".dat"
             line=next(F)                  
             fileOut = open(s, "w")
@@ -32,7 +32,7 @@ def getCoordinates(inputFile):
 
 t = time.time()
 
-inputFile = "./movie-B2N2.xyz"
+inputFile = "./movie-B6N6.xyz"
 
 getCoordinates(inputFile)
 
