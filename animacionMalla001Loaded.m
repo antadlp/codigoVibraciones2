@@ -1,4 +1,4 @@
-function animacionMalla001Loaded(inter2)
+function animacionMalla001Loaded(inter2, frames)
 
 nMA = importdata('nMA-GP.dat');
 
@@ -22,7 +22,9 @@ h = surf(Xpol,Ypol,Z, 'ZDataSource', 'Z', 'EdgeColor', 'none');
 axis([-inf inf -inf inf -1 1])
 hold on
 
-for m=1:4999
+a = frames(1)
+b = frames(end)
+for m=a:b
     m
     Z = -1*Zp(:,:,m);
     refreshdata(h,'caller')
