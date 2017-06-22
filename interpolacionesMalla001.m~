@@ -5,7 +5,7 @@ clear all
 
 fs = 10;
 
-nMA = importdata('nMA-B3N3.dat');
+nMA = importdata('nMA-B12N12c.dat');
 
 
 xnMA = nMA(:,2);
@@ -21,11 +21,11 @@ y = min(ynMA):1/fs:max(ynMA);
 [Xpol Ypol] = meshgrid(x,y);
 
 
-s0 = '/home/antadlp/malla/gridXY-B3N3/'
+s0 = '/home/ruben/malla/gridXY-B12N12c/'
 for al=1:5000
 
 
-   s = strcat('/home/antadlp/malla/separados-B3N3-zz-dat/frame', int2str(al), '.dat');
+   s = strcat('/home/ruben/malla/separados-B12N12c-zz-dat/frame', int2str(al), '.dat');
    filename = s;
    zframe = importdata(filename);
 
@@ -39,7 +39,7 @@ for al=1:5000
    %   toSpl = 0;
    %   clear Ahr, s, s2, tAhr, toSpl;
    
-      s = strcat(s0,'horizontales-B3N3-', int2str(i));
+      s = strcat(s0,'horizontales-B12N12c-', int2str(i));
       s2 = strcat('splineHor', i);
       filename = s;
       Ahr = importdata(filename);
@@ -136,7 +136,7 @@ for al=1:5000
    %   toSpl = 0;
    %   clear Ahr, s, s2, tAhr, toSpl;
    
-      s = strcat(s0,'verticales-B3N3-', int2str(i));
+      s = strcat(s0,'verticales-B12N12c-', int2str(i));
       s2 = strcat('splineVert', i);
       filename = s;
       Avt = importdata(filename);
@@ -237,7 +237,7 @@ for al=1:5000
    inter2(:,:,al) = interp2(XNMA,YNMA, interTotal(:,:,al)',Xpol,Ypol);
 
    al
-   s2 = '/home/antadlp/malla/mallaInter-B3N3/frame';
+   s2 = '/home/ruben/malla/mallaInter-B12N12c/frame';
    filename2 = strcat(s2, int2str(al));
    fileID2 = fopen(filename2, 'w');
 
@@ -256,7 +256,7 @@ for al=1:5000
 
 end
 
-save('zp-B3N3', 'inter2')
+save('zp-B12N12c', 'inter2')
 
 %t = 1:100;
 %for i=1:length(t)
