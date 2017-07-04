@@ -37,6 +37,30 @@ end
 %subplot(2,1,1); mesh(Xp(:,:,1)); title('X');
 %subplot(2,1,2); mesh(Yp(:,:,1)); title('Y');
 
+%X = Xp(:,:,1);
+%Y = Yp(:,:,1);
+%subplot(2,1,1); hx = mesh(X, 'ZDataSource', 'X');
+%subplot(2,1,2); hy = mesh(Y, 'ZDataSource', 'Y');
+%hold on
+%
+%for m=1:100
+%   m
+%   X = Xp(:,:,m);
+%   Y = Yp(:,:,m);
+%   refreshdata(hx,'caller')
+%   refreshdata(hy,'caller')
+%   drawnow;
+%   pause(0.35)
+%end
+
+%AWSOMEEEE IT WOORKS :'D
+
+%now see if i can save it to a movie
+
+v = VideoWriter('subplotTry.avi');
+v.Quality = 80;
+open(v);
+
 X = Xp(:,:,1);
 Y = Yp(:,:,1);
 subplot(2,1,1); hx = mesh(X, 'ZDataSource', 'X');
@@ -50,10 +74,15 @@ for m=1:100
    refreshdata(hx,'caller')
    refreshdata(hy,'caller')
    drawnow;
+   frame = getframe(gcf);
+   writeVideo(v,frame)
    pause(0.35)
 end
 
-%AWSOMEEEE IT WOORKS :'D
+close(v)
 
-%now see if i can save it to a movie
+%wow! its all works!!
+%now make it with the graphene -bn data
+
+
 
