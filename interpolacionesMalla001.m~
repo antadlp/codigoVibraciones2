@@ -5,7 +5,7 @@ clear all
 
 fs = 10;
 
-nMA = importdata('nMA-B12N12c.dat');
+nMA = importdata('nMA-B12N12d.dat');
 
 
 xnMA = nMA(:,2);
@@ -21,11 +21,11 @@ y = min(ynMA):1/fs:max(ynMA);
 [Xpol Ypol] = meshgrid(x,y);
 
 
-s0 = '/home/ruben/malla/gridXY-B12N12c/'
-for al=1:5000
+s0 = '/home/antadlp/malla/gridXY-B12N12d/'
+for al=1:2
 
 
-   s = strcat('/home/ruben/malla/separados-B12N12c-zz-dat/frame', int2str(al), '.dat');
+   s = strcat('/home/antadlp/malla/separados-B12N12d-zz-dat/frame', int2str(al), '.dat');
    filename = s;
    zframe = importdata(filename);
 
@@ -39,13 +39,21 @@ for al=1:5000
    %   toSpl = 0;
    %   clear Ahr, s, s2, tAhr, toSpl;
    
-      s = strcat(s0,'horizontales-B12N12c-', int2str(i));
+      s = strcat(s0,'horizontales-B12N12d-', int2str(i));
       s2 = strcat('splineHor', i);
       filename = s;
       Ahr = importdata(filename);
    
-      toSpl(:,1) = Ahr(:,1);
-      toSpl(:,2) = zframe(Ahr(:,3),3);
+      %Ahr contiene la informacion de la posicion de cada atomo sobre
+      %cada linea horizontal, por ejemplo la linea equis va tener valores 
+      %diferentes para la primer columna (valores de x-coord) y valores iguales
+      %para la segunda columna que serian las posiciones y-coord por ser una linea
+      %horizontal la tercer columna es el numero de atomo que corresponde a esas
+      %coordenadas
+
+      toSpl(:,1) = Ahr(:,1); %toSpl las que se van a interpolar
+      toSpl(:,2) = zframe(Ahr(:,3),3); %se va interpolar las posiciones z, del atomo i
+      %Ahr(i,3) con valor zframe(atomoi, z-values)
       
       if (Ahr(1,1) > xnMA(1))
    
@@ -93,17 +101,19 @@ for al=1:5000
    
       end
    
-   %   figure('Name', 'vertoSplit')
-   %   plot(toSpl(:,1), toSpl(:,2), 'r')
-   %   hold on
-   %   plot(toSpl(:,1), toSpl(:,2), 'ro')
-   %   grid on
-   %   plot(xnMA, 0, '-go')
-   %   plot(Ahr(:,1), Ahr(:,3))
-   %
      
-      interHor(i, :) = pchip(toSpl(:,1), toSpl(:,2), xnMA);
+      interHor(i, :) = spline(toSpl(:,1), toSpl(:,2), xnMA);
    
+      figure('Name', 'verSpliness')
+      plot(Ahr(:,1), zframe(Ahr(:,3),3), 'ro')
+      hold on
+      grid on
+      plot(xnMA, interHor(i,:))
+      
+
+
+
+
       clear toSpl;
    
       if (exist('tAhr'))
@@ -114,17 +124,8 @@ for al=1:5000
    
    end
    
-   %
-   %s = strcat('horizontales', int2str(2));
-   %filename = s;
-   %Ahr = importdata(filename);
-   %figure('Name', 'verSpliness')
-   %plot(Ahr(:,1), Ahr(:,3), 'ro')
-   %hold on
-   %grid on
-   %plot(xnMA, interHor(2,:))
-   %
    
+      
    clear toSpl;
    for i=1:21
    %for i=2:3
@@ -136,7 +137,7 @@ for al=1:5000
    %   toSpl = 0;
    %   clear Ahr, s, s2, tAhr, toSpl;
    
-      s = strcat(s0,'verticales-B12N12c-', int2str(i));
+      s = strcat(s0,'verticales-B12N12d-', int2str(i));
       s2 = strcat('splineVert', i);
       filename = s;
       Avt = importdata(filename);
@@ -237,7 +238,7 @@ for al=1:5000
    inter2(:,:,al) = interp2(XNMA,YNMA, interTotal(:,:,al)',Xpol,Ypol);
 
    al
-   s2 = '/home/ruben/malla/mallaInter-B12N12c/frame';
+   s2 = '/home/antadlp/malla/mallaInter-B12N12d/frame';
    filename2 = strcat(s2, int2str(al));
    fileID2 = fopen(filename2, 'w');
 
@@ -256,7 +257,7 @@ for al=1:5000
 
 end
 
-save('zp-B12N12c', 'inter2')
+save('zp-B12N12d', 'inter2')
 
 %t = 1:100;
 %for i=1:length(t)

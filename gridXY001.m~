@@ -230,9 +230,9 @@ yp = limitYAbj:01:limitYArr;
 r = .3;
 ep = 20;
 offset = 0;
-%/home/antadlp/tonio/TemporalesNoOrg/vibracionesMatlab
-sHor = '/home/antadlp/malla/gridXY-B12N12c/horizontales-B12N12c-';
-sVert = '/home/antadlp/malla/gridXY-B12N12c/verticales-B12N12c-';
+%/home/ruben/tonio/TemporalesNoOrg/vibracionesMatlab
+sHor = '/home/ruben/malla/gridXY-B12N12c/horizontales-B12N12c-';
+sVert = '/home/ruben/malla/gridXY-B12N12c/verticales-B12N12c-';
 [xX02 lineaX02] = makeAtomsLine(H69, H47);
 listaHor02 = crossLine2dAtom(MA, xX02, lineaX02, r, ep, 1);
 arrHor02 = arrangeAtomsLine(xX02, lineaX02, MA, listaHor02, 0.001);

@@ -8,7 +8,7 @@ function gridXY001
 
 close all
 clear all
-filename = 'frame1-B12N12c-rota.dat'; % Primer frame del movie a analizar
+filename = 'frame1-B12N12d-rota.dat'; % Primer frame del movie a analizar
 XYZFile = importdata(filename);
 
 format short e 
@@ -104,7 +104,7 @@ end
 
 D = importdata('frame1-mil-rota.dat'); %no cambiar nombre -mil!!
 nAtoms = 142;
-fileMap0 = fopen('map0-B12N12c.dat','w');
+fileMap0 = fopen('map0-B12N12d.dat','w');
 for i=1:nAtoms
 
    F = abs(X-D(i,1));
@@ -230,9 +230,9 @@ yp = limitYAbj:01:limitYArr;
 r = .3;
 ep = 20;
 offset = 0;
-%/home/ruben/tonio/TemporalesNoOrg/vibracionesMatlab
-sHor = '/home/ruben/malla/gridXY-B12N12c/horizontales-B12N12c-';
-sVert = '/home/ruben/malla/gridXY-B12N12c/verticales-B12N12c-';
+%/home/antadlp/tonio/TemporalesNoOrg/vibracionesMatlab
+sHor = '/home/antadlp/malla/gridXY-B12N12d/horizontales-B12N12d-';
+sVert = '/home/antadlp/malla/gridXY-B12N12d/verticales-B12N12d-';
 [xX02 lineaX02] = makeAtomsLine(H69, H47);
 listaHor02 = crossLine2dAtom(MA, xX02, lineaX02, r, ep, 1);
 arrHor02 = arrangeAtomsLine(xX02, lineaX02, MA, listaHor02, 0.001);
@@ -1184,7 +1184,7 @@ A2 = [arrVert21(length(arrVert21), 1) arrVert21(length(arrVert21), 2)];
 plot(xY21t, lineaY21t)
 
 
-namefile = 'nMA-B12N12c.dat';
+namefile = 'nMA-B12N12d.dat';
 fileID = fopen(namefile, 'w');
 for i=1:length(nMA(:,1))
    fprintf(fileID, '%f\t %f\t %f\t\n', nMA(i,1),...
@@ -1247,15 +1247,15 @@ end
 axis([limitXIzq limitXDer limitYAbj limitYArr]);
 grid on
 
-save('nMA-B12N12c', 'nMA')
+save('nMA-B12N12d', 'nMA')
 
-%A = importdata('nMA-B12N12c');
+%A = importdata('nMA-B12N12d');
 A = nMA;
-B = importdata('char-B12N12c.dat');
-C = importdata('frame1-B12N12c-rota.dat');
+B = importdata('char-B12N12d.dat');
+C = importdata('frame1-B12N12d-rota.dat');
 
-fileID = fopen('mallanMA-B12N12c.xyz','w');
-fileID2 = fopen('mallanMA-B12N12c.dat','w');
+fileID = fopen('mallanMA-B12N12d.xyz','w');
+fileID2 = fopen('mallanMA-B12N12d.dat','w');
 nAtoms = 142;
 
 [A1 A2] = unique(A(:,1));
@@ -1307,9 +1307,9 @@ fclose('all');
 
 
 
-D = importdata('mallanMA-B12N12c.dat');
+D = importdata('mallanMA-B12N12d.dat');
 
-fileMap = fopen('mapnMA-B12N12c.dat','w');
+fileMap = fopen('mapnMA-B12N12d.dat','w');
 for i=1:nAtoms
 
    F = abs(X-D(i,1));

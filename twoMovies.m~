@@ -1,0 +1,11 @@
+video2=VideoReader('movie-BN-260.avi');
+
+duracion=200
+
+v=VideoReader('movie-GP-260.avi');
+
+while hasFrame(v)
+   video1 = readFrame(v)
+end
+
+
