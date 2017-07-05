@@ -1,9 +1,10 @@
 function makeMovieMalla001(inter2, frames,s)
 
-movieName = strcat('movie-',s,'-260.avi')
+movieName = strcat('movie-',s,'-5000.avi')
 
 v = VideoWriter(movieName);
-v.Quality = 80;
+v.Quality = 100;
+v.FrameRate = 13;
 open(v);
 
 nMAName = strcat('nMA-',s,'.dat')
@@ -24,6 +25,7 @@ y = min(ynMA):1/fs:max(ynMA);
 
 %load('zp-B12N12a.mat');
 Zp = inter2;
+clear inter2;
 Z = Zp(:,:,1);
 h = surf(Xpol,Ypol,Z, 'ZDataSource', 'Z', 'EdgeColor', 'none');
 axis([-inf inf -inf inf -1 1])
