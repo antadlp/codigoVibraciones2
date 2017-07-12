@@ -4,7 +4,7 @@ function animacionMalla001Loaded(inter2, frames)
 %v.Quality = 100;
 %open(v);
 
-nMA = importdata('nMA-B12N12d.dat');
+nMA = importdata('nMA-GP.dat');
 
 xnMA = nMA(:,2);
 ynMA = nMA(:,3);
@@ -21,7 +21,7 @@ y = min(ynMA):1/fs:max(ynMA);
 
 %load('zp-B12N12a.mat');
 Zp = inter2;
-Z = -1*Zp(:,:,1);
+Z = Zp(:,:,1);
 h = surf(Xpol,Ypol,Z, 'ZDataSource', 'Z', 'EdgeColor', 'none');
 axis([-inf inf -inf inf -1 1])
 hold on
@@ -30,7 +30,7 @@ a = frames(1)
 b = frames(end)
 for m=a:b
     m
-    Z = -1*Zp(:,:,m);
+    Z = Zp(:,:,m);
     refreshdata(h,'caller')
     drawnow; 
 %    frame = getframe(gcf);

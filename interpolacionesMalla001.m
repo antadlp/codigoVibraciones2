@@ -5,7 +5,7 @@ clear all
 
 fs = 10;
 
-nMA = importdata('nMA-B12N12d.dat');
+nMA = importdata('nMA-B12N12e.dat');
 
 
 xnMA = nMA(:,2);
@@ -21,11 +21,11 @@ y = min(ynMA):1/fs:max(ynMA);
 [Xpol Ypol] = meshgrid(x,y);
 
 
-s0 = '/home/antadlp/malla/gridXY-B12N12d/'
-for al=1:2
+s0 = '/home/antadlp/malla/gridXY-B12N12e/'
+for al=1:5000
 
 
-   s = strcat('/home/antadlp/malla/separados-B12N12d-zz-dat/frame', int2str(al), '.dat');
+   s = strcat('/home/antadlp/malla/separados-B12N12e-zz-dat/frame', int2str(al), '.dat');
    filename = s;
    zframe = importdata(filename);
 
@@ -39,7 +39,7 @@ for al=1:2
    %   toSpl = 0;
    %   clear Ahr, s, s2, tAhr, toSpl;
    
-      s = strcat(s0,'horizontales-B12N12d-', int2str(i));
+      s = strcat(s0,'horizontales-B12N12e-', int2str(i));
       s2 = strcat('splineHor', i);
       filename = s;
       Ahr = importdata(filename);
@@ -102,13 +102,14 @@ for al=1:2
       end
    
      
-      interHor(i, :) = spline(toSpl(:,1), toSpl(:,2), xnMA);
+      interHor(i, :) = pchip(toSpl(:,1), toSpl(:,2), xnMA);
+      %interHor(i, :) = spline(toSpl(:,1), toSpl(:,2), xnMA);
    
-      figure('Name', 'verSpliness')
-      plot(Ahr(:,1), zframe(Ahr(:,3),3), 'ro')
-      hold on
-      grid on
-      plot(xnMA, interHor(i,:))
+%      figure('Name', 'verSpliness')
+%      plot(Ahr(:,1), zframe(Ahr(:,3),3), 'ro')
+%      hold on
+%      grid on
+%      plot(xnMA, interHor(i,:))
       
 
 
@@ -137,7 +138,7 @@ for al=1:2
    %   toSpl = 0;
    %   clear Ahr, s, s2, tAhr, toSpl;
    
-      s = strcat(s0,'verticales-B12N12d-', int2str(i));
+      s = strcat(s0,'verticales-B12N12e-', int2str(i));
       s2 = strcat('splineVert', i);
       filename = s;
       Avt = importdata(filename);
@@ -238,7 +239,7 @@ for al=1:2
    inter2(:,:,al) = interp2(XNMA,YNMA, interTotal(:,:,al)',Xpol,Ypol);
 
    al
-   s2 = '/home/antadlp/malla/mallaInter-B12N12d/frame';
+   s2 = '/home/antadlp/malla/mallaInter-B12N12e/frame';
    filename2 = strcat(s2, int2str(al));
    fileID2 = fopen(filename2, 'w');
 
@@ -257,7 +258,7 @@ for al=1:2
 
 end
 
-save('zp-B12N12d', 'inter2')
+save('zp-B12N12e', 'inter2')
 
 %t = 1:100;
 %for i=1:length(t)

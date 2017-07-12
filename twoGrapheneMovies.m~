@@ -8,7 +8,8 @@ An = C{1};
 Bn = C{2};
 
 v = VideoWriter('two-subplot-Graphene.avi');
-v.Quality = 70;
+v.Quality = 90;
+v.FrameRate = 13;
 open(v);
 
 fs = 10;
@@ -42,10 +43,15 @@ Zb = 1*Zpb(:,:,1);
 
 subplot(2,1,1); ha = surf(XA, YA, Za, 'ZDataSource', 'Za', ...
 'EdgeColor', 'none');
+axis([-inf inf -inf inf -0.8 0.8])
+hold on
 
 subplot(2,1,2); hb = surf(XB, YB, Zb, 'ZDataSource', 'Zb', ...
 'EdgeColor', 'none');
-axis([-inf inf -inf inf -1 1])
+axis([-inf inf -inf inf -0.8 0.8])
+
+fig = gcf;
+set(fig, 'Position',[0, 0, 900, 900]);
 hold on
 
 a = frames(1);
@@ -60,7 +66,7 @@ for m=a:b
    drawnow;
    frame = getframe(gcf);
    writeVideo(v,frame)
-   pause(0.35)
+   pause(0.0005)
 end
 
 close(v)
