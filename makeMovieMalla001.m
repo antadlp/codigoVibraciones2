@@ -16,8 +16,7 @@ ynMA = nMA(:,3);
 xnMA = unique(xnMA);
 ynMA = unique(ynMA);
 
-fs = 10;
-%[XNMA YNMA] = meshgrid(xnMA, ynMA);
+fs = 20;
 x = min(xnMA):1/fs:max(xnMA);
 y = min(ynMA):1/fs:max(ynMA);
 [Xpol Ypol] = meshgrid(x,y);

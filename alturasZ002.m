@@ -9,12 +9,12 @@ function alturasZ002
 close all
 clear all
 
-filename = '/home/antadlp/malla/movie-B12N12e-zz.xyz';
+filename = '/home/antadlp/malla/movie-GP-zz.xyz';
 fileID3 = fopen(filename, 'w');
 
 for j = 1:5000
    
-   s = '/home/antadlp/malla/separados-B12N12e-dat/'
+   s = '/home/antadlp/malla/separados-GP-dat/'
    filename = strcat(s,'frame',int2str(j),'.dat');
    XYZFile = importdata(filename);
    format short e
@@ -70,12 +70,12 @@ for j = 1:5000
 
    end
 
-   atoms = importdata('char-B12N12e.dat');
-   aGrid = importdata('mallanMA-B12N12e.dat');
-   mp = importdata('mapnMA-B12N12e.dat');
+   atoms = importdata('char-GP.dat');
+   aGrid = importdata('mallanMA-GP.dat');
+   mp = importdata('mapnMA-GP.dat');
 
-   s = '/home/antadlp/malla/separados-B12N12e-zz-xyz/';
-   s2 = '/home/antadlp/malla/separados-B12N12e-zz-dat/';
+   s = '/home/antadlp/malla/separados-GP-zz-xyz/';
+   s2 = '/home/antadlp/malla/separados-GP-zz-dat/';
    filename1 = strcat(s,'frame',int2str(j),'.xyz');
    filename2 = strcat(s2,'frame',int2str(j),'.dat');
    fileID = fopen(filename1, 'w');

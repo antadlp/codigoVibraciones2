@@ -1,4 +1,4 @@
-function animacionMalla001Loaded(inter2, frames)
+function animacionMalla001Loaded(inter2, fs, frames)
 
 %v = VideoWriter('peaks.avi');
 %v.Quality = 100;
@@ -12,11 +12,17 @@ ynMA = nMA(:,3);
 xnMA = unique(xnMA);
 ynMA = unique(ynMA);
 
-fs = 10;
+%fs = 30;
 %[XNMA YNMA] = meshgrid(xnMA, ynMA);
 x = min(xnMA):1/fs:max(xnMA);
 y = min(ynMA):1/fs:max(ynMA);
 [Xpol Ypol] = meshgrid(x,y);
+
+%[XNMA YNMA] = meshgrid(x, ynMA);
+%x = min(xnMA):1/fs:max(xnMA);
+%y = min(ynMA):1/fs:max(ynMA);
+%[Xpol Ypol] = meshgrid(x,y);
+
 
 
 %load('zp-B12N12a.mat');
@@ -35,7 +41,7 @@ for m=a:b
     drawnow; 
 %    frame = getframe(gcf);
 %    writeVideo(v,frame);
-    pause(.035)
+    pause(.075)
 end
 
 %close(v)

@@ -4,7 +4,7 @@ movieName = strcat('movie-',s,'-5000.avi')
 
 v = VideoWriter(movieName);
 v.Quality = 100;
-v.FrameRate = 15;
+v.FrameRate = 13;
 open(v);
 
 nMAName = strcat('nMA-',s,'.dat')

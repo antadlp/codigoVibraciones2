@@ -8,7 +8,7 @@ function gridXY001
 
 close all
 clear all
-filename = 'frame1-B12N12e-rota.dat'; % Primer frame del movie a analizar
+filename = 'frame1-GP-rota.dat'; % Primer frame del movie a analizar
 XYZFile = importdata(filename);
 
 format short e 
@@ -104,7 +104,7 @@ end
 
 D = importdata('frame1-mil-rota.dat'); %no cambiar nombre -mil!!
 nAtoms = 142;
-fileMap0 = fopen('map0-B12N12e.dat','w');
+fileMap0 = fopen('map0-GP.dat','w');
 for i=1:nAtoms
 
    F = abs(X-D(i,1));
@@ -231,8 +231,8 @@ r = .3;
 ep = 20;
 offset = 0;
 %/home/antadlp/tonio/TemporalesNoOrg/vibracionesMatlab
-sHor = '/home/antadlp/malla/gridXY-B12N12e/horizontales-B12N12e-';
-sVert = '/home/antadlp/malla/gridXY-B12N12e/verticales-B12N12e-';
+sHor = '/home/antadlp/malla/gridXY-GP/horizontales-GP-';
+sVert = '/home/antadlp/malla/gridXY-GP/verticales-GP-';
 [xX02 lineaX02] = makeAtomsLine(H69, H47);
 listaHor02 = crossLine2dAtom(MA, xX02, lineaX02, r, ep, 1);
 arrHor02 = arrangeAtomsLine(xX02, lineaX02, MA, listaHor02, 0.001);
@@ -1184,7 +1184,7 @@ A2 = [arrVert21(length(arrVert21), 1) arrVert21(length(arrVert21), 2)];
 plot(xY21t, lineaY21t)
 
 
-namefile = 'nMA-B12N12e.dat';
+namefile = 'nMA-GP.dat';
 fileID = fopen(namefile, 'w');
 for i=1:length(nMA(:,1))
    fprintf(fileID, '%f\t %f\t %f\t\n', nMA(i,1),...
@@ -1247,15 +1247,15 @@ end
 axis([limitXIzq limitXDer limitYAbj limitYArr]);
 grid on
 
-save('nMA-B12N12e', 'nMA')
+save('nMA-GP', 'nMA')
 
-%A = importdata('nMA-B12N12e');
+%A = importdata('nMA-GP');
 A = nMA;
-B = importdata('char-B12N12e.dat');
-C = importdata('frame1-B12N12e-rota.dat');
+B = importdata('char-GP.dat');
+C = importdata('frame1-GP-rota.dat');
 
-fileID = fopen('mallanMA-B12N12e.xyz','w');
-fileID2 = fopen('mallanMA-B12N12e.dat','w');
+fileID = fopen('mallanMA-GP.xyz','w');
+fileID2 = fopen('mallanMA-GP.dat','w');
 nAtoms = 142;
 
 [A1 A2] = unique(A(:,1));
@@ -1307,9 +1307,9 @@ fclose('all');
 
 
 
-D = importdata('mallanMA-B12N12e.dat');
+D = importdata('mallanMA-GP.dat');
 
-fileMap = fopen('mapnMA-B12N12e.dat','w');
+fileMap = fopen('mapnMA-GP.dat','w');
 for i=1:nAtoms
 
    F = abs(X-D(i,1));
