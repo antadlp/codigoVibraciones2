@@ -1,91 +1,21 @@
 
 \documentclass[a4paper, landscape]{article}
-
-\usepackage{geometry}
-\usepackage{lipsum}
-
-
-
-\usepackage[utf8]{inputenc}
-
 \usepackage {amsmath}
-\usepackage {amssymb}
 \usepackage [usenames]{color}
-\usepackage {graphicx}
-\usepackage{float}
-\usepackage[rftl]{floatflt}
-\usepackage[T1]{fontenc}
-\usepackage{units}
-\usepackage[spanish]{babel}
-\numberwithin{equation}{section}
-\usepackage{booktabs}
-\usepackage{nopageno}
-
-\usepackage{graphics}
-\usepackage{tabularx}
-
-\usepackage{bibentry}
-\usepackage{rotating}
-\usepackage{textcomp}
-\definecolor{ColorLinks}{RGB}{46,139,87}
-\usepackage{titlesec, blindtext, color}
-\usepackage{url}
-\usepackage[pdftex]{hyperref}
-\usepackage{makeidx}
 \usepackage{caption}
-\makeindex
-\usepackage{appendix}
-
-
-\usepackage{footnote}
-
-
-\hypersetup{
-colorlinks,
-citecolor=black,
-filecolor=black,
-linkcolor=black,
-urlcolor=black
-}
-
-\definecolor{RojoTitulo}{RGB}{219,32,32}
-\definecolor{AzulSeccion}{RGB}{42,76,189}
-\definecolor{VerdeSubseccion}{RGB}{46,139,87}
-
-\usepackage{titlesec}
-
-\titleformat*{\section}{\normalfont\Large\bfseries\color{blue}}
-\titleformat*{\subsection}{\normalfont\large\bfseries\color{VerdeSubseccion}}
-\titleformat*{\subsubsection}{\normalfont\normalsize\bfseries\color{black}}
-\definecolor{MyBlack}     {cmyk} {0.0,0.0,0.0,1.0}
-\definecolor{MyBlue}      {cmyk} {1.0,0.3,0.0,0.6}
-\definecolor{MyGreen}     {cmyk} {0.8,0.0,0.4,0.5}
-\definecolor{MyLightGray} {cmyk} {0.0,0.0,0.0,0.1}
-\definecolor{MyRed}       {cmyk} {0.0,0.6,1.0,0.0}
-\definecolor{MyPink}      {cmyk} {0.0,0.8,0.0,0.0}
-\definecolor{MyWhite}     {cmyk} {0.0,0.0,0.0,0.0}
-\definecolor{MyYellow}    {cmyk} {0.0,0.0,0.8,0.2}
-\definecolor{Mytry}       {cmyk} {0.3,0.1,0.3,0.0}
-
-
-
-\renewcommand\spanishtablename{\scriptsize{TABLA}}
 
 \begin{document}
-
-
-
 
 \begin{table}[!htb]
 \captionsetup{width=0.7\textwidth, font={singlespacing}}
 \begin{center}
 \begin{tabular} {c c c c c c c c c}
-\multicolumn {9} {l} {{\bf Tabla .} {Average charges in $10^{-2}$ charge units}\\
+\multicolumn {9} {l} {{\bf Table .} {Average charges in $10^{-2}$ charge units}}\\
 \\
 \hline \hline
-Name &&$\bar{q}_{H}$ && $\bar{q}_{C}$ && $\bar{q}_{N}$ && $\bar{q}_{B}$ \\
-\cline{1-1} \cline{3-3} \cline{5-5}\cline{7-7}\cline{9-9
-all-carbon   && 9.9428 && -2.4421 &&    0        && 0       \\
+Name && $\bar{q}_{H}$ && $\bar{q}_{C}$ && $\bar{q}_{N}$ && $\bar{q}_{B}$ \\
+\cline{1-1} \cline{3-3} \cline{5-5}\cline{7-7}\cline{9-9}
+all-carbon   && 9.9428 && -2.4421 &&    0.0000   && 0.0000  \\
 gp02bn       && 9.9844 && -1.9148 &&  -66.5215   && 32.0536 \\
 gp03bn       && 9.9727 && -2.0803 &&  -63.1169   && 44.9276 \\
 gp06bn       && 9.9672 && -1.7217 &&  -63.2267   && 45.9822 \\
@@ -96,38 +26,13 @@ gp12bn-d     && 9.7324 && 2.5867  &&  -69.6298   && 27.5203 \\
 gp12bn-e     && 9.8456 && -0.8837 &&  -63.5752   && 47.2299 \\
 bn08c        && 9.5777 && 7.9151  &&  -71.2436   && 64.9890 \\
 bn04c        && 9.5265 && 14.1522 &&  -71.7385   && 65.8594 \\
-bn02c       && 9.4694 && 13.8971 &&  -71.9688   && 66.7378 \\
+bn02c        && 9.4694 && 13.8971 &&  -71.9688   && 66.7378 \\
+all-bn       && 9.4600 && 0.0000  &&  -72.2018   && 67.5548 \\
 \hline
 \end{tabular}
-\caption{\footnotesize{Mallas\label{dosdos}}}
 \end{center}
 \end{table}
 
 
-
-\begin{table}[!htb]
-\captionsetup{width=0.7\textwidth, font={singlespacing}}
-\begin{center}
-\begin{tabular} {c c c c c c c c c}
-\multicolumn {9} {l} {{\bf Tabla .} {Frequencias de Mallas de Grafeno}}\\
-\\
-\hline \hline
-B12N12a && B12N12b && B12N12c && B12N12d && B12N12e \\
-\cline{1-1} \cline{3-3} \cline{5-5}\cline{7-7} \cline{9-9}
-2.959E+15 && 2.956E+15 && 2.990E+15 && 2.953E+15 && 2.912E+15 \\
-2.991E+15 && 2.988E+15 && 2.958E+15 && 2.954E+15 && 2.956E+15 \\
-2.992E+15 && 3.015E+15 && 2.966E+15 && 2.924E+15 && 2.936E+15 \\
-2.972E+15 && 2.957E+15 && 2.844E+15 && 2.914E+15 && 3.015E+15 \\
-3.015E+15 && 2.938E+15 && 2.812E+15 && 2.988E+15 && 2.946E+15 \\
-2.908E+15 && 2.845E+15 && 2.858E+15 && 2.991E+15 && 2.937E+15 \\
-2.971E+15 && 2.954E+15 && 3.079E+15 && 2.952E+15 && 2.957E+15 \\
-3.032E+15 && 2.663E+15 && 3.032E+15 && 2.812E+15 && 2.925E+15 \\
-2.976E+15 && 2.908E+15 && 2.903E+15 && 2.956E+15 && 2.986E+15 \\
-2.990E+15 && 2.937E+15 && 2.881E+15 && 2.711E+15 && 2.868E+15 \\
-\hline
-\end{tabular}
-\caption{\footnotesize{Mallas\label{dosdos}}}
-\end{center}
-\end{table}
 
 \end{document}
