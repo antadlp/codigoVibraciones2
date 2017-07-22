@@ -1,0 +1,38 @@
+
+\documentclass[a4paper, landscape]{article}
+\usepackage {amsmath}
+\usepackage [usenames]{color}
+\usepackage{caption}
+
+\begin{document}
+
+\begin{table}[!htb]
+\captionsetup{width=0.7\textwidth, font={singlespacing}}
+\begin{center}
+\begin{tabular} {c c c c c c c c c}
+\multicolumn {9} {l} {{\bf Table .} {Sum of charges by atom}}\\
+\\
+\hline \hline
+Name && $q_{H}$ && $q_{C}$ && $q_{N}$ && $q_{B}$ \\
+\cline{1-1} \cline{3-3} \cline{5-5}\cline{7-7}\cline{9-9}
+all-carbon   && 2.78397 && -2.78397 &&    0.00000    && 0.00000  \\
+gp02bn       && 2.79564 && -2.10628 &&   -1.33043    && 0.64107 \\
+gp03bn       && 2.79237 && -2.24670 &&   -1.89351    && 1.34783 \\
+gp06bn       && 2.79081 && -1.75615 &&   -3.79360    && 2.75893 \\
+gp12bn-a     && 2.77314 && -1.42184 &&   -8.21623    && 6.86493 \\
+gp12bn-b     && 2.80496 && -0.31312 &&   -7.94813    && 5.45630 \\
+gp12bn-c     && 2.73217 && -1.87239 &&   -8.30852    && 7.44875 \\
+gp12bn-d     && 2.72508 &&  2.32805 &&    3.30244    && 27.5203 \\
+gp12bn-e     && 2.75678 && -0.79534 &&  -63.5752   && 47.2299 \\
+bn08c        && 9.5777 && 7.9151  &&  -71.2436   && 64.9890 \\
+bn04c        && 9.5265 && 14.1522 &&  -71.7385   && 65.8594 \\
+bn02c        && 9.4694 && 13.8971 &&  -71.9688   && 66.7378 \\
+all-bn       && 9.4600 && 0.0000  &&  -72.2018   && 67.5548 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+\end{document}

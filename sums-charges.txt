@@ -1,0 +1,150 @@
+gp12bn-b
+   Number of H atoms: 28
+   Number of N atoms: 12
+   Number of C atoms: 90
+   Number of B atoms: 12
+
+   Sum charge for H: 2.80496
+   Sum charge for N: -7.94813
+   Sum charge for C: -0.31312
+   Sum charge for B: 5.4563
+Total charge of grid: 3.00000000042e-06
+
+gp12bn-a
+   Number of H atoms: 28
+   Number of C atoms: 90
+   Number of N atoms: 12
+   Number of B atoms: 12
+
+   Sum charge for H: 2.77314
+   Sum charge for C: -1.42184
+   Sum charge for N: -8.21623
+   Sum charge for B: 6.86493
+Total charge of grid: 1.9999999985e-06
+
+gp03bn
+   Number of H atoms: 28
+   Number of C atoms: 108
+   Number of N atoms: 3
+   Number of B atoms: 3
+
+   Sum charge for H: 2.79237
+   Sum charge for C: -2.2467
+   Sum charge for N: -1.89351
+   Sum charge for B: 1.34783
+Total charge of grid: -5.00000000003e-06
+
+gp12bn-e
+   Number of H atoms: 28
+   Number of C atoms: 90
+   Number of B atoms: 12
+   Number of N atoms: 12
+
+   Sum charge for H: 2.75678
+   Sum charge for C: -0.79534
+   Sum charge for B: 5.66759
+   Sum charge for N: -7.62903
+Total charge of grid: -9.99999998363e-07
+
+bn02c
+   Number of H atoms: 28
+   Number of B atoms: 56
+   Number of N atoms: 56
+   Number of C atoms: 2
+
+   Sum charge for H: 2.65142
+   Sum charge for B: 37.37316
+   Sum charge for N: -40.30252
+   Sum charge for C: 0.27794
+Total charge of grid: 3.99999998935e-06
+
+gp12bn-c
+   Number of H atoms: 28
+   Number of C atoms: 90
+   Number of N atoms: 12
+   Number of B atoms: 12
+
+   Sum charge for H: 2.73217
+   Sum charge for C: -1.87239
+   Sum charge for N: -8.30852
+   Sum charge for B: 7.44875
+Total charge of grid: 2.00000000028e-06
+
+all-bn
+   Number of H atoms: 28
+   Number of B atoms: 57
+   Number of N atoms: 57
+
+   Sum charge for H: 2.64881
+   Sum charge for B: 38.50621
+   Sum charge for N: -41.15502
+Total charge of grid: -5.00000000159e-06
+
+gp02bn
+   Number of H atoms: 28
+   Number of C atoms: 110
+   Number of N atoms: 2
+   Number of B atoms: 2
+
+   Sum charge for H: 2.79564
+   Sum charge for C: -2.10628
+   Sum charge for N: -1.33043
+   Sum charge for B: 0.64107
+Total charge of grid: 1.00000000025e-06
+
+bn04c
+   Number of H atoms: 28
+   Number of B atoms: 55
+   Number of N atoms: 55
+   Number of C atoms: 4
+
+   Sum charge for H: 2.66743
+   Sum charge for B: 36.22266
+   Sum charge for N: -39.45618
+   Sum charge for C: 0.56609
+Total charge of grid: 9.99999994811e-07
+
+all-carbon
+   Number of H atoms: 28
+   Number of C atoms: 114
+
+   Sum charge for H: 2.78397
+   Sum charge for C: -2.78397
+Total charge of grid: 3.00000000086e-06
+
+bn08c
+   Number of H atoms: 28
+   Number of B atoms: 53
+   Number of N atoms: 53
+   Number of C atoms: 8
+
+   Sum charge for H: 2.68175
+   Sum charge for B: 34.44418
+   Sum charge for N: -37.75913
+   Sum charge for C: 0.63321
+Total charge of grid: 6.00000001238e-06
+
+gp12bn-d
+   Number of H atoms: 28
+   Number of C atoms: 90
+   Number of B atoms: 12
+   Number of N atoms: 12
+
+   Sum charge for H: 2.72508
+   Sum charge for C: 2.32805
+   Sum charge for B: 3.30244
+   Sum charge for N: -8.35557
+Total charge of grid: -1.00000000103e-06
+
+gp06bn
+   Number of H atoms: 28
+   Number of C atoms: 102
+   Number of B atoms: 6
+   Number of N atoms: 6
+
+   Sum charge for H: 2.79081
+   Sum charge for C: -1.75615
+   Sum charge for B: 2.75893
+   Sum charge for N: -3.7936
+Total charge of grid: -4.99999999981e-06
+

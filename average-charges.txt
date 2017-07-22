@@ -4,10 +4,10 @@ gp12bn-b
    Number of C atoms: 90
    Number of B atoms: 12
 
-   Average charge for H: 0.10017707142857143
-   Average charge for N: -0.6623445
-   Average charge for C: -0.003479088888888889
-   Average charge for B: 0.4546914166666667
+   Average charge for H: 0.1
+   Average charge for N: -0.66
+   Average charge for C: -0.0
+   Average charge for B: 0.45
 
 gp12bn-a
    Number of H atoms: 28
@@ -15,10 +15,10 @@ gp12bn-a
    Number of N atoms: 12
    Number of B atoms: 12
 
-   Average charge for H: 0.09904060714285715
-   Average charge for C: -0.015798266666666668
-   Average charge for N: -0.6846855000000001
-   Average charge for B: 0.5720779166666666
+   Average charge for H: 0.1
+   Average charge for C: -0.02
+   Average charge for N: -0.68
+   Average charge for B: 0.57
 
 gp03bn
    Number of H atoms: 28
@@ -26,10 +26,10 @@ gp03bn
    Number of N atoms: 3
    Number of B atoms: 3
 
-   Average charge for H: 0.09972746428571426
-   Average charge for C: -0.020802740740740736
-   Average charge for N: -0.6311686666666666
-   Average charge for B: 0.449276
+   Average charge for H: 0.1
+   Average charge for C: -0.02
+   Average charge for N: -0.63
+   Average charge for B: 0.45
 
 gp12bn-e
    Number of H atoms: 28
@@ -37,10 +37,10 @@ gp12bn-e
    Number of B atoms: 12
    Number of N atoms: 12
 
-   Average charge for H: 0.09845632142857146
-   Average charge for C: -0.008837077777777777
-   Average charge for B: 0.47229891666666673
-   Average charge for N: -0.6357523333333334
+   Average charge for H: 0.1
+   Average charge for C: -0.01
+   Average charge for B: 0.47
+   Average charge for N: -0.64
 
 bn02c
    Number of H atoms: 28
@@ -48,10 +48,10 @@ bn02c
    Number of N atoms: 56
    Number of C atoms: 2
 
-   Average charge for H: 0.09469371428571428
-   Average charge for B: 0.6673778035714284
-   Average charge for N: -0.7196878571428572
-   Average charge for C: 0.13897149999999997
+   Average charge for H: 0.09
+   Average charge for B: 0.67
+   Average charge for N: -0.72
+   Average charge for C: 0.14
 
 gp12bn-c
    Number of H atoms: 28
@@ -59,19 +59,19 @@ gp12bn-c
    Number of N atoms: 12
    Number of B atoms: 12
 
-   Average charge for H: 0.09757735714285713
-   Average charge for C: -0.020804366666666664
-   Average charge for N: -0.6923770833333333
-   Average charge for B: 0.6207294999999999
+   Average charge for H: 0.1
+   Average charge for C: -0.02
+   Average charge for N: -0.69
+   Average charge for B: 0.62
 
 all-bn
    Number of H atoms: 28
    Number of B atoms: 57
    Number of N atoms: 57
 
-   Average charge for H: 0.09460035714285715
-   Average charge for B: 0.6755475263157893
-   Average charge for N: -0.7220179649122805
+   Average charge for H: 0.09
+   Average charge for B: 0.68
+   Average charge for N: -0.72
 
 gp02bn
    Number of H atoms: 28
@@ -79,10 +79,10 @@ gp02bn
    Number of N atoms: 2
    Number of B atoms: 2
 
-   Average charge for H: 0.09984428571428572
-   Average charge for C: -0.019148
-   Average charge for N: -0.6652155
-   Average charge for B: 0.320536
+   Average charge for H: 0.1
+   Average charge for C: -0.02
+   Average charge for N: -0.67
+   Average charge for B: 0.32
 
 bn04c
    Number of H atoms: 28
@@ -90,17 +90,17 @@ bn04c
    Number of N atoms: 55
    Number of C atoms: 4
 
-   Average charge for H: 0.09526535714285712
-   Average charge for B: 0.6585938545454545
-   Average charge for N: -0.7173851090909091
-   Average charge for C: 0.1415225
+   Average charge for H: 0.1
+   Average charge for B: 0.66
+   Average charge for N: -0.72
+   Average charge for C: 0.14
 
 all-carbon
    Number of H atoms: 28
    Number of C atoms: 114
 
-   Average charge for H: 0.09942753571428573
-   Average charge for C: -0.024420771929824555
+   Average charge for H: 0.1
+   Average charge for C: -0.02
 
 bn08c
    Number of H atoms: 28
@@ -108,10 +108,10 @@ bn08c
    Number of N atoms: 53
    Number of C atoms: 8
 
-   Average charge for H: 0.09577678571428573
-   Average charge for B: 0.649890169811321
-   Average charge for N: -0.7124364528301887
-   Average charge for C: 0.07915112499999999
+   Average charge for H: 0.1
+   Average charge for B: 0.65
+   Average charge for N: -0.71
+   Average charge for C: 0.08
 
 gp12bn-d
    Number of H atoms: 28
@@ -119,10 +119,10 @@ gp12bn-d
    Number of B atoms: 12
    Number of N atoms: 12
 
-   Average charge for H: 0.09732435714285714
-   Average charge for C: 0.025867211111111107
-   Average charge for B: 0.27520316666666667
-   Average charge for N: -0.6962975
+   Average charge for H: 0.1
+   Average charge for C: 0.03
+   Average charge for B: 0.28
+   Average charge for N: -0.7
 
 gp06bn
    Number of H atoms: 28
@@ -130,8 +130,8 @@ gp06bn
    Number of B atoms: 6
    Number of N atoms: 6
 
-   Average charge for H: 0.09967175000000002
-   Average charge for C: -0.01721711764705882
-   Average charge for B: 0.45982233333333333
-   Average charge for N: -0.632267
+   Average charge for H: 0.1
+   Average charge for C: -0.02
+   Average charge for B: 0.46
+   Average charge for N: -0.63
 
