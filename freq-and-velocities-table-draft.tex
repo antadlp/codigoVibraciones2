@@ -1,0 +1,41 @@
+
+\documentclass[a4paper, landscape]{article}
+\usepackage {amsmath}
+\usepackage [usenames]{color}
+\usepackage{caption}
+
+\begin{document}
+
+\begin{table}[!htb]
+\captionsetup{width=0.7\textwidth, font={singlespacing}}
+\begin{center}
+\begin{tabular} {c c c c c c c }
+\multicolumn {7} {l} {{\bf Table:} {\footnotesize{Table with the wave propagation speed to the right}}}\\
+\multicolumn {7} {l} {\footnotesize{ $v_{R}$, wave propagation speed to the left $v_{L}$ and the }} \\
+\multicolumn {7} {l} {\footnotesize{ average within all frames of the spatial frequency with the}}\\
+\multicolumn {7} {l} {\footnotesize{ most contribution $\bar{w}^{*}$. The units of speed are $\mathring{A}ngstr\ddot{o}ms$ $(\mathring{A})$}}\\
+\multicolumn {7} {l} {\footnotesize{ over $femtoseconds$ $(fs)$ and the units of the average spatial}}\\
+\multicolumn {7} {l} {\footnotesize{ frequency are given in $(\mathring{A}^{-1})$.}}\\
+%\multicolumn {7} {l} { one over $\mathring{A}ngstr\ddot{o}ms$}\\
+\hline \hline
+Name && $v_{R}$ && $v_{L}$ && $\bar{w}^{*}$ \\
+\cline{1-1} \cline{3-3} \cline{5-5}\cline{7-7}
+all-carbon   && 0.1268  &&  0.1281  &&    0.3331   \\
+gp02bn       && 0.1225  &&  0.1243  &&    0.2962   \\
+gp03bn       && 0.1231  &&  0.1207  &&    0.2888   \\
+gp06bn       && 0.1136  &&  0.1201  &&    0.2900   \\
+gp23bn       && 0.0837  &&  0.0834  &&    0.2788   \\
+gp12bn-a     && 0.1064  &&  0.1050  &&    0.3369   \\
+gp12bn-b     && 0.1209  &&  0.1198  &&    0.3500   \\
+gp12bn-c     && 0.0975  &&  0.1158  &&    0.2767   \\
+gp12bn-d     && 0.1004  &&  0.1004  &&    0.2831   \\
+gp12bn-e     && 0.1255  &&  0.1294  &&    0.3028   \\
+all-bn       && 0.0669  &&  0.0668  &&    0.1850   \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+\end{document}
